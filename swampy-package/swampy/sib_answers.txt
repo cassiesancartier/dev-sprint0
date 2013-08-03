@@ -1,6 +1,6 @@
 # Text answers from Week 0
 
-# Name:
+# Name: Cassie Sancartier
 
 
 
@@ -13,33 +13,49 @@ Explain what each of the following lines does. Use the terminology you learned f
 
 Answer:
 
-
-
-
+The first line imports all of the functions from the TurtleWorld class into the GUI 
+The second line assigns TurtleWorld() to the world
+The third line defines 'bob' as the name of the Turtle
+The fourth line indicates that this program should wait for the user to input code
 
 
 These questions pertain to the program you wrote in Week0.
 
 -- What are the arguments of polygon()?  What type is each argument?
+
 Answer:
+turtle - string
+length - integer (could also be a float)
+sides - integer
 
 -- What two turtle functions did you use to draw the sides of the polygon?
-Answer:
+
+Answer: 
+fd() - moves bob forward the specified amount
+lt() - turns bob the correct number of degrees in order to create the polygon
 
 -- What are the arguments for polyline?  What type is each argument?
-Answer:
 
-
-
+Answer: 
+turtle - string
+length - integer
+sides - integer (could also be a float)
+theta - integer in degrees (could also be a float)
 
 
 Suppose you wrote a function, center_circle(), that draws a circle of a given radius around the current location of the turtle and restores the turtle to its starting point.
 
 -- What turtle functions would you use to move the turtle from the center to the edge of the circle and get ready to call the original circle() function?
+
 Answer:
+pu() -  so that the turtle would move from the center to the outside of the circle without drawing a line the length of the radius.  
+lt() function to have the turtle turn the correct number of degrees to prepare to start drawing
+pd() function so that the line would start drawing once circle() was called.
 
 -- Suppose the interface of this function requires the turtle to end up in the same place it started, facing in the same direction it started.
-Answer:
+
+Answer: It would essentially be the reverse of the above (a bit less) - so I would use lt() again to have the turtle turn the correct number of degrees towards the center, and then pu() so the turtle could travel to the center without drawing a line.
 
 -- What is this type of requirement called?
-Answer:
+
+Answer: This is called a postcondition.
